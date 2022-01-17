@@ -4,7 +4,7 @@
 }
 
 #uploader .queueList {
-    margin: 20px;
+    /*! margin: 20px; */
     border: 3px dashed #e6e6e6;
 }
 #uploader .queueList.filled {
@@ -25,10 +25,10 @@
 }
 
 #uploader .placeholder {
-    min-height: 350px;
-    padding-top: 178px;
+    /*! min-height: 50px; */
+    /*! padding-top: 80px; */
     text-align: center;
-    background: url(../webuploader/image.png) center 93px no-repeat;
+    /*! background: url(../webuploader/image.png) center top no-repeat; */
     color: #cccccc;
     font-size: 18px;
     position: relative;

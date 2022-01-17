@@ -347,6 +347,7 @@ jQuery(function() {
                 stats = uploader.getStats();
                 if ( stats.successNum ) {
                     alert( '上传成功' );
+                    location.reload();
                 } else {
                     // 没有成功的图片，重设
                     state = 'done';
