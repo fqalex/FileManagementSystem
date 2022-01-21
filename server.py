@@ -120,21 +120,19 @@ def upload_part(fileName):  # 接收前端上传的一个分片
     # chunk = 0  # 分片序号
     chunk = int(chunk)  # 分片序号
     with open(saveDirN + '%s' % target_fileName, 'ab') as target_file:  # 创建新文件
-        while True:
-            try:
-                fileName = saveDirN + '%s_%s' % (target_fileName, chunk)
-                source_file = open(fileName, 'rb')  # 按序打开每个分片
-                target_file.write(source_file.read())  # 读取分片内容写入新文件
-                source_file.close()
-                os.remove(fileName)  # 删除该分片，节约空间
-            except Exception as e:
-                print("error is ",e)
-                break
-            chunk += 1
+        try:
+            fileName = saveDirN + '%s_%s' % (target_fileName, chunk)
+            source_file = open(fileName, 'rb')  # 按序打开每个分片
+            target_file.write(source_file.read())  # 读取分片内容写入新文件
+            source_file.close()
+            os.remove(fileName)  # 删除该分片，节约空间
+        except Exception as e:
+            print("error is ",e)
+    
             
     print("upload all chunks saveas ",target_fileName)
     return str(0)
     # return rt('./index.html')
 
 if __name__ == '__main__':
-    app.run(port=8000,debug = False)
+    app.run(host='0.0.0.0',port=8765,debug = False)
