@@ -86,8 +86,8 @@ jQuery(function() {
         chunkSize: 10 * 1024 * 1024,
         // server: '{{ upload_url}}',
         fileNumLimit: 1000,
-        fileSizeLimit: 10 * 1024 * 1024 * 1024,    // 200 M
-        fileSingleSizeLimit: 10 * 1024 * 1024 * 1024    // 50 M
+        fileSizeLimit: 100 * 1024 * 1024 * 1024,    // 100 G
+        fileSingleSizeLimit: 100 * 1024 * 1024 * 1024    // 100 G
     });
 
     // 添加“添加文件”的按钮，
