@@ -4,7 +4,6 @@
 import os
 import shutil
 from flask import Flask, request, Response,redirect, render_template as rt
-from itsdangerous import exc
 app = Flask(__name__)
 
 
