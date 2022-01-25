@@ -109,6 +109,7 @@ def upload_part(fileName):  # 接收前端上传的一个分片
     saveDirN = nowDirN + (saveName+'.Save' + '/') 
     if chunks != None:
         saveName = '%s_%s' % (saveName, chunk)  # 构造该分片的唯一标识符  
+    else:
         os.rmdir(saveDirN)
         saveDirN = nowDirN
         # saveName = request.form.get('name')  # 获取文件的唯一标识符
@@ -126,9 +127,10 @@ def upload_part(fileName):  # 接收前端上传的一个分片
     # task = request.args.get('task_id')  # 获取文件的唯一标识符
     # chunk = 0  # 分片序号
     # print((os.listdir(saveDirN)))
-    # print(len(os.listdir(saveDirN)))
-    # print(chunks)
-    # print(len(os.listdir(saveDirN)) == chunks)
+    print("saveDirN is ",saveDirN)
+    print(len(os.listdir(saveDirN)))
+    print(chunks)
+    print(len(os.listdir(saveDirN)) == int(chunks))
     if len(os.listdir(saveDirN)) == int(chunks):
         print("All file chunks got ",saveDirN + '%s' % target_fileName)
         chunk = 0
