@@ -85,6 +85,7 @@ jQuery(function() {
         chunked: true,
         chunkSize: 10 * 1024 * 1024,
         // server: '{{ upload_url}}',
+        server: 'http://192.168.20.53:8091/app/webUpLoader',
         fileNumLimit: 1000,
         fileSizeLimit: 100 * 1024 * 1024 * 1024,    // 100 G
         fileSingleSizeLimit: 100 * 1024 * 1024 * 1024    // 100 G
