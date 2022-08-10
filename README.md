@@ -1,6 +1,6 @@
 # web文件管理系统
-### ITDeviceManagementSystem
-###### https://github.com/fqalex/ITDeviceManagementSystem
+### WebFileManagementSystem
+###### https://github.com/fqalex/FileManagementSystem
 
 这是一个web文件管理系统
 使用python开发
